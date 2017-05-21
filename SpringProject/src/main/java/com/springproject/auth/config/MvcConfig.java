@@ -18,7 +18,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter{
         registry.addViewController("/search").setViewName("search");
         registry.addViewController("/403").setViewName("403");
     }    
-    /**#* CCVJHVCJHE JHWJH BJHB HBW HBWJHE$%*/
+    /**#* CCVJHVCJHE JHWJH BJHB HBW DWDW DWDWHBWJHE$%*/
     @Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
