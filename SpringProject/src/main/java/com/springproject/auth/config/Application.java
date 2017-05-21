@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EnableJpaRepositories(basePackages = "com.springproject.auth.dao")
 @ComponentScan(basePackages = "com.springproject.auth")
 public class Application {
-
+/*COMMIT FUNCOU?!?!?!??*/
     public static void main(String[] args) throws Throwable {
         SpringApplication.run(Application.class, args);
     }
