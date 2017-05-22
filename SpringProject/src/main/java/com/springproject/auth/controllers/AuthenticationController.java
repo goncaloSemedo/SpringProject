@@ -52,9 +52,9 @@ public class AuthenticationController {
 		
 		FindDeviceReply reply;
 		
-		DeviceAttribute device = deviceDao.findByDeviceId(deviceId);
+		List<DeviceAttribute> devices = (List<DeviceAttribute>) deviceDao.findByDeviceId(deviceId);
 		
-		if(device == null) {
+		if(devices == null || devices.isEmpty()) {
 			String provisionCode = AuthenticationUtils.generateProvisionCode();
 			ProvisionCodesCache.addCode(deviceId, provisionCode);
 			reply = (FindDeviceReply) AuthenticationReplyFactory.createFindDeviceReply("Device not Found", provisionCode);

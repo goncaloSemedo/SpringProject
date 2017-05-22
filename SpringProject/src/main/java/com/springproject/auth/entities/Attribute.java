@@ -16,8 +16,6 @@ public class Attribute implements Serializable {
 	public static final String OPERATING_SYSTEM = "Operating System";
 	public static final String MODEL = "Model";
 	
-	
-	
 	@Id   
     @Column(name="ATRIBUTE_ID")
     private Long atributeId;
@@ -44,7 +42,7 @@ public class Attribute implements Serializable {
 		this.atributeName = atributeName;
 	}
 
-	public boolean isFingerprint() {
+	public boolean getFingerprint() {
 		return fingerprint;
 	}
 

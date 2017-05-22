@@ -16,6 +16,8 @@ import com.springproject.auth.entities.Attribute;
 @RestController
 public class DevicesController {
 	
+	boolean test = true;
+	
 	@Autowired
 	private AttributesDao dao;
 	
@@ -24,8 +26,13 @@ public class DevicesController {
 		
 		List<Attribute> fingerprints = (List<Attribute>) dao.findAll();
 		
+		boolean test = true;
 		
-		return new ModelAndView("devices", "fingerprints", fingerprints);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("fingerprints", fingerprints);  
+		mv.addObject("model",fingerprints.get(0));
+		
+		return mv;
 		
 	}
 
